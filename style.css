@@ -1,14 +1,426 @@
-html{
-  -webkit-box-sizing: border-box;
+@font-face {
+  src: url('fonts/ColabThi.woff');
+  font-family: Colab;
+}
+
+*{
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-*, *:after, *:before{
-  box-sizing: inherit;
+::selection{
+  background: #0ec464;
+  color: white;
 }
 
-h1{
-  font-family: 'Futura', sans-serif;
+::-webkit-scrollbar{
+  width: 16px;
+}
+
+::-webkit-scrollbar-track{
+
+}
+
+::-webkit-scrollbar-thumb{
+  background: #0ec464;
+}
+
+.alignR{
+  text-align: right;
+}
+
+.alignL{
+  text-align: left;
+}
+
+.row{
+  display: flex;
+}
+
+.row1{
+  display: flex;
+}
+
+.font{
+  font-family: Colab;
+} .style{font-style: italic;} .w{font-style: }
+
+.green {
+  color: #0ec464;
+}
+
+@keyframes coffee{
+  0%{
+    opacity: 1;
+  }
+  50%{opacity: .5;}
+  100% {
+    opacity: .1;
+  }
+}
+
+body{
+
+}
+
+@media screen and (max-width: 700px) {
+  .row1 {display: block;}
+}
+
+
+#navbar{
+  position: fixed;
+  left: -1440px;
+  top: 0px;
+  transition: 0.8s;
+  width: 100;
+  opacity: 1;
+}
+
+.button{
+  font-size: 1.5em;
+  background: white;
+  padding: 12px 20px;
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  border-radius: 100%;
+  display: flex;
+  color: #0ec464;
+  border: 2px solid #0ec464;
+  cursor: pointer;
+  transition: .6s;
+}
+
+.button:hover{
+  box-shadow: 2px 2px 20px #0ec464;
+}
+
+.menubarC{
+  background-color: #0ec464;
+  width: 100%;
+}
+
+.menubar {
+  margin: auto;
+  max-width: 1440px;
+  overflow: hidden;
+  width: 100%;
+  z-index: 90;
+  background-color: #0ec464;
+}
+
+.menubar a{
+  padding: 25px 30px;
+  color: white;
+  font-family: Colab;
+  text-decoration: none;
+  font-size: 1.4em;
+  float: right;
+  background-color: #0ec464;
+}
+
+.menubar a:first-child{
+  padding: 35px 70px;
+  margin-left: 15px;
+  float: left;
+  background-image: url('images/logot.gif');
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.wadah{
+  background-image: url('images/line.png');
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: repeat-y;
+  background-position: 50% 0;
+}
+
+.container {
+  margin: auto;
+}
+
+.content{
+  max-width: 1040px;
+  margin: auto;
+  padding: 10px;
+}
+
+.left{
+  padding: 240px 0px;
+}
+.right{
+  width: 100%;
+  overflow: hidden;
+}
+
+.head{
+  padding-bottom: 20px;
+}
+
+.subhead p{
+  font-size: 2em;
+}
+
+.subhead p:first-child::before{
+  content: ' "';
+  color: #0ec464;
+  font-size: 6em;
+  position: absolute;
+  transform: translate(-120%, -20%);
+}
+
+.head{align-items: center; font-size: 2.5em;color: rgb(26, 26, 28);}
+
+.imageS{
+  height: 600px;
+  width: 500px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 50%;
+  background-size: 90%;
+  background-position: 20% 100%;
+}
+
+.pic{
+  background-image: url('images/cup.png');
+}
+
+.pic1{
+  background-image: url('images/sman.png');
+}
+
+.pic2{
+  background-image: url('images/fman.png');
+}
+
+.pic3{
+  background-image: url('images/owner.png');
+}
+
+.selection{
+  width: 100%;
+  background: #0ec464;
+  padding: 32px 0px;
+}
+
+.containerC{
+  margin: auto;
+  max-width: 1330px;
+  text-align: center;
+}
+
+.containerC h3{
+  padding: 430px 0px;
+  font-size: 4em;
+  color: white;
+  font-family: colab;
+}
+
+.containerC h3::after{
+  content: ' ';
+  padding: 15px 80px;
+  background-image: url('images/logot.gif');
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.coffee {
+  max-width: 1220px;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.select img{
+  margin: 30px 0px;
+}
+
+.select{
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 16px;
+  max-width: 360px;
+  overflow: hidden;
+}
+
+.cont {
+  position: relative;
+  top: -19px;
+  left: -45%;
+  transform: rotate(90deg);
+  transition: 0.5s;
+  color: white;
+  font-size: 2.5em;
+  font-family: 'Tahoma', sans-serif;
+}
+
+.cont:hover{
+  color: #0ec454;
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: #0ec454;
+}
+
+.select h1{
+  padding: 0;
+  color: #0ec454;
+  text-align: left;
+  font-family: Arial Black,Arial Bold,Gadget,sans-serif;
+  font-size: 2em;
+}
+.select h2{
+  text-align: left;
+  font-family: colab;
+  font-size: .9em;
+  font-style: italic;
+}
+
+.select .price{
+  font-family: colab;
+  font-size: 1em;
+  color: white;
+  padding: 10px 25px;
+  background: #0ec454;
+  letter-spacing: 1px;
+  float: right;
+  cursor: pointer;
+}
+
+.sosmedC{
+  font-family: Colab;
+  margin: auto;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.sosmed h2{
+  font-family: Colab;
+  text-align: center;
+  margin: auto;
+  font-size: 4em;
+  font-weight: lighter;
+  position: relative;
+  top: 160px;
+  letter-spacing: 5px;
+}
+
+.fb a, .tw a, .gg a{
+  text-decoration: none;
+  font-size: 2em;
+  color: #0ec454;
+}
+
+.fb, .tw, .gg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.333%;
+  height: 80vh;
+  text-decoration: none;
+  font-size: 3em;
+}
+
+.ownerP{
+  width: 100%;
+  position: relative;
+  top: -120px;
+}
+
+.owner{
+  padding-bottom: 35px;
+}
+
+.owner h1{
+  font-size: 4em;
+  padding: 17px;
+  background: #0ec454;
+  color: white;
+  width: 100%;
+}
+
+.owner h1:after{
+  content: ' ';
+  padding: 15px 100px;
+  background-image: url('images/logot.gif');
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.inside{
+  max-width: 990px;
+  min-width: 500px;
+}
+
+.footer{
+  background-image: url('images/line3.png');
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 0% 0;
+  margin: auto;
+}
+
+.footerC{
+  margin: auto;
+  max-width: 770px;
+}
+
+.col{
+  font-family: Colab;
+  margin: auto;
+  text-align: center;
+  border-right: 1px solid white;
+  padding-right: 90px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  animation-name: coffee;
+  opacity: 1;
+}
+
+.col:last-child{
+  border-right: 0;
+}
+
+.col h2{
+  padding: 15px 0px 25px 0px;
+  font-size:2.3em ;
+  color: white;
+}
+
+.col li{
+  list-style: none;
+  padding: 4px 0px;
+}
+
+.col li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+}
+
+.col li a:hover{
+  text-decoration: underline;
+}
+
+.sosmed1{
+  max-width: 990px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.sosmed1 a{
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  padding: 24px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.sosmed1 a:hover{
+  color: #0ec454;
+  background: white;
 }
